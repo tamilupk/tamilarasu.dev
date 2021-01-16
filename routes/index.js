@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var fs =  require('fs/promises')
+var fs =  require('fs').promises;
 var path =  require('path')
 
 /* GET home page. */
