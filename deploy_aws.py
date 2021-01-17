@@ -1,6 +1,8 @@
-print("Start blue/green deployment")
+print("Starting blue/green deployment")
 import boto3
 import time
+
+start = time.time()
 
 ec2 = boto3.client('ec2')
 elb = boto3.client('elbv2')
@@ -144,5 +146,5 @@ if to_delete != "":
             instance_id_to_delete,
         ]
     )
-print('Deployment complete, SUCCESS')
+print(f'SUCCESS, Deployment completed in {int(time.time()-start)} seconds')
 
