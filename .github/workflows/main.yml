@@ -27,4 +27,4 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
       - name: Test
-        run: python3 test.py
+        run: python3 $GITHUB_WORKSPACE/test.py
