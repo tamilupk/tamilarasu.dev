@@ -16,11 +16,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install Boto3
-        run: pip3 install boto3
+      - name: Install Dependencies 
+        run: pip3 install boto3 requests
 
-      - uses: nick-invision@assert-action@v1
-        with:
-          expected: HTTP/2 200
-          actual: ${{ curl -I https://www.tamilarasu.dev }}
-          comparison: startsWith
+      - name: Deploy 
+        run: python3 $GITHUB_WORKSPACE/deploy_aws.py
+        env: 
+          AWS_DEFAULT_REGION: us-east-1
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+      - name: Test
+        run: python3 test.py
