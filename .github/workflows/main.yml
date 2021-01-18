@@ -34,4 +34,4 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Deploy 
-        run: python3 tamilarasu.dev/deploy_aws.py
+        run: tree /home/runner/work/tamilarasu.dev
