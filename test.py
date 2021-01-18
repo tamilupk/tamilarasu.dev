@@ -1,6 +1,6 @@
 import requests
 
-r =requests.get('https://www.tamilarasu.ddev')
+r =requests.get('https://www.tamilarasu.dev')
 
 if r.status_code == 200:
     print('Test passed')
