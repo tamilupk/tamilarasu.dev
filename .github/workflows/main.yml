@@ -27,7 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Install Python
-        run: apt install python
+        run: sudo apt install python
 
       - name: Install Boto3
         run: pip3 install boto3
