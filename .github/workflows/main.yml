@@ -25,16 +25,11 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
-      - name: Install Python
-        run: sudo apt install python
-
       - name: Install Boto3
         run: pip3 install boto3
 
-      # Runs a set of commands using the runners shell
       - name: Deploy 
-        run: python3 /home/runner/work/tamilarasu.dev/tamilarasu.dev/actions.py
+        run: python3 /home/runner/work/tamilarasu.dev/tamilarasu.dev/deploy_aws.py
         env: 
           AWS_DEFAULT_REGION: us-east-1
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
