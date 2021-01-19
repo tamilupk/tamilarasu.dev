@@ -8,7 +8,7 @@
     }
 
     .bgimg {
-        background-image: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url('/images/mist.jpg');
+        background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/images/mist.jpg');
         height: 100%;
         background-position: center;
         background-size: cover;
@@ -47,9 +47,20 @@
         color: white;
     }
 </style>
+
 <head>
-    <title>Tamilarasu Ulaganathan</title>
+    <title itemprop=’name’>Tamilarasu Ulaganathan</title>
+    <script type=”application/ld+json”>
+        {  
+            “@context” : “http://schema.org”,
+            “@type” : “WebSite”,
+            “name” : “Tamilarasu Ulaganathan”,
+            “alternateName” : “Tamilarasu”,
+            “url” : “http://www.tamilarasu.dev"
+        }
+        </script>
 </head>
+
 <body>
     <div class="bgimg">
         <div class="topleft">
@@ -61,7 +72,8 @@
             <p>94 days left</p>
         </div>
         <div class="bottomleft">
-            <p><a class="mail" target="_blank" href="mailto:tamilarasu.ulaganathan@gmail.com">tamilarasu.ulaganathan@gmail.com</a></p>
+            <p><a class="mail" target="_blank"
+                    href="mailto:tamilarasu.ulaganathan@gmail.com">tamilarasu.ulaganathan@gmail.com</a></p>
         </div>
     </div>
 
